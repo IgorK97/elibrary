@@ -1,0 +1,15 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Consistence
+{
+    public class ContributorBook
+    {
+        public long BookId { get; set; }
+        public long ContributorId { get; set; }
+        public int RoleId { get; set; }
+    }
+}
