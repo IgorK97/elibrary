@@ -12,8 +12,10 @@ namespace Consistence
         public long BookId { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public decimal DiscountPercentage { get; set; }
+        public long CreatedByUserId { get; set; }
         public decimal DiscountAmount { get; set; }
         public bool IsActive { get; set; }
+        public Book Book { get; set; } = null!;
+        public ApplicationUser CreatedByUser { get; set; } = null!; 
     }
 }

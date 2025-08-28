@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Consistence
 {
-    public class SubmissionStatus
+    public class CodeType
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
-        public ICollection<Submission> Submissions { get; set; } = [];
+        public string Description { get; set; } = null!;
+        public ICollection<UserCode> UserCodes { get; set; } = [];
     }
 }

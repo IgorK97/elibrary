@@ -13,9 +13,6 @@ namespace Consistence
         public DateTime? OrderDate { get; set; }
         public decimal TotalAmount { get; set; }
         public int StatusId { get; set; }
-
-        public bool PointsAreUsed { get; set; } = false;
-        public int PointsUsed { get; set; } = 0;
         public ApplicationUser User { get; set; } = null!;
         public ICollection<OrderItem> OrderItems { get; set; } = [];
     }

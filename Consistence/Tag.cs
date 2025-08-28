@@ -8,9 +8,11 @@ namespace Consistence
 {
     public class Tag
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public string Name { get; set; } = null!;
         public bool IsSystem { get; set; }
-        public long? CreatedBy { get; set; }
+        public long? CreatedByUserId { get; set; }
+        public bool IsDeleted { get; set; }
+        public ApplicationUser? CreatedByUser { get; set; }
     }
 }

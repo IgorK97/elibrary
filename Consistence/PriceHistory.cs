@@ -14,6 +14,8 @@ namespace Consistence
         public decimal NewPrice { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public long ChangedBy { get; set; }
+        public long ChangedByUserId { get; set; }
+        public Book Book { get; set; } = null!;
+        public ApplicationUser ChangeByUser { get; set; } = null!;
     }
 }

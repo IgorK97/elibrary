@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Consistence
 {
-    public class PointsTransactionType
+    public class SubscriptionStatus
     {
         public int Id { get; set; }
         public string Name { get; set; } = null!;
-        public ICollection<PointsTransaction> PointsTransactions { get; set; } = [];
+        public ICollection<UserSubscription> UserSubscriptions { get; set; } = [];
     }
 }
