@@ -16,7 +16,16 @@ namespace Consistence
         public string Description { get; set; } = null!;
         public string? CoverPath { get; set; }
         public string? FilePath { get; set; }
+        public long? PublisherId { get; set; }
         public int? BBKId { get; set; }
         public int? UDKId { get; set; }
+        public bool IsHidden { get; set; }
+        public ICollection<Creation> Creations { get; set; } = [];
+        public ICollection<CreationBook> CreationBooks { get; set; } = [];
+        public BBK? BBK { get; set; }
+        public UDK? UDK { get; set; }
+        public ICollection<OrderItem> OrderItems { get; set; } = [];
+        public Publisher? Publisher { get; set; }
+        public ICollection<Category> Categories { get; set; } = [];
     }
 }

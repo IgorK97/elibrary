@@ -10,5 +10,7 @@ namespace Consistence
     {
         public long CreationId { get; set; }
         public long AuthorId { get; set; }
+        public Creation Creation { get; set; } = null!;
+        public Contributor Author { get; set; } = null!;
     }
 }

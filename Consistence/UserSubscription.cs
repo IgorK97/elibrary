@@ -14,6 +14,6 @@ namespace Consistence
         public DateTime? EndDate { get; set; }
         public int SubscriptionTypeId { get; set; }
         public int StatusId { get; set; }
-
+        public int RebillId { get; set; }
     }
 }

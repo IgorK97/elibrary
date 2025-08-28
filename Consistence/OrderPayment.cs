@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace Consistence
 {
-    public class OrderItem
+    public class OrderPayment
     {
-        public int Id { get; set; }
         public long OrderId { get; set; }
-        public long BookId { get; set; }
-        public decimal UnitPrice { get; set; }
+        public long PaymentId { get; set; }
         public Order Order { get; set; } = null!;
-        public Book Book { get; set; } = null!;
+        public Payment Payment { get; set; } = null!;
     }
 }

@@ -13,5 +13,8 @@ namespace Consistence
         //public string Slug { get; set; }
         public string Description { get; set; } = null!;
         public DateTime? WrittenAt { get; set; }
+        public ICollection<Book> Books { get; set; } = [];
+        public ICollection<Genre> Genres { get; set; } = [];
+        public ICollection<AuthorCreation> AuthorCreation { get; set; } = [];
     }
 }

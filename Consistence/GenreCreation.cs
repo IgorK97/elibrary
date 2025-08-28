@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Consistence
 {
-    public class CreationBook
+    public class GenreCreation
     {
+        public int GenreId { get; set; }
         public long CreationId { get; set; }
-        public long BookId { get; set; }
+        public Genre Genre { get; set; } = null!;
         public Creation Creation { get; set; } = null!;
-        public Book Book { get; set; } = null!;
-
     }
 }

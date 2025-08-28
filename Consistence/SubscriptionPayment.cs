@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Consistence
 {
-    public class BookPublisher
+    public class SubscriptionPayment
     {
-        public long BookId { get; set; }
-        public long PublisherId { get; set; }
+        public long SubcsriptionId { get; set; }
+        public long PaymentId { get; set; }
     }
 }

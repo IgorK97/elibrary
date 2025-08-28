@@ -9,10 +9,13 @@ namespace Consistence
     public class Payment
     {
         public long Id { get; set; }
-        public long OrderId { get; set; }
+        public long PaymentId { get; set; } //from provider
+        //public long OrderId { get; set; }
         public DateTime PaymentDate { get; set; }
+        public DateTime? CancellationDate { get; set; }
         public decimal Amount { get; set; }
         public int PaymentMethodId { get; set; }
         public int StatusId { get; set; }
+        //Order ? Subscription ?
     }
 }

@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace Consistence
 {
-    public class Contributors
+    public class Contributor
     {
         public long Id { get; set; }
         public string FullName { get; set; } = null!;
         public string Description { get; set; } = null!;
         public long? UserId { get; set; }
+        public ApplicationUser? User { get; set; }
+        public ICollection<ContributorBook> ContributorBooks { get; set; } = [];
     }
 }

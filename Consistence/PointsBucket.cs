@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace Consistence
 {
-    public class BookView
+    public class PointsBucket
     {
         public long Id { get; set; }
         public long UserId { get; set; }
-        public long BookId { get; set; }
-        public DateTime ViewedAt { get; set; }
-        public ApplicationUser User { get; set; } = null!;
-        public Book Book { get; set; } = null!;
+        public int PointsEarned { get; set; }
+        public int PointsRemaining {get;set;}
+        public DateTime EarnDate { get; set; }
+        public DateTime ExpiryDate { get; set; }
+
     }
 }

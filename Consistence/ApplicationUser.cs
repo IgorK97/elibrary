@@ -16,7 +16,7 @@ namespace Consistence
         public DateTime BirthDate { get; set; }
         public bool MarketingAgreement { get; set; } = false;
         public bool IsDeleted { get; set; } = false;
-        public int Points { get; set; } = 0;
+        //public int Points { get; set; } = 0;
 
     }
 }

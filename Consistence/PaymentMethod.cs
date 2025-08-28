@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace Consistence
 {
-    public class License
+    public class PaymentMethod
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; } = null!;
-        public string Description { get; set; } = null!;
-        public ICollection<Agreement> Agreements { get; set; } = [];
+        public ICollection<Payment> Payments { get; set; } = [];
     }
 }
