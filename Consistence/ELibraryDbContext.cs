@@ -35,11 +35,11 @@ namespace Persistence
         public DbSet<License> Licenses { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderItem> OrderItems { get; set; }
-        public DbSet<OrderStatus> OrderStatus { get; set; }
+        public DbSet<OrderStatus> OrderStatuses { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<PaymentMethod> PaymentMethods { get; set; }
         public DbSet<PaymentStatus> PaymentStatuses { get; set; }
-        public DbSet<PriceHistory> PriceHistory { get; set; }
+        public DbSet<PriceHistory> PriceHistories { get; set; }
         public DbSet<Promotion> Promotions { get; set; }
         public DbSet<Publisher> Publishers { get; set; }
         public DbSet<Review> Reviews { get; set; }
@@ -55,18 +55,11 @@ namespace Persistence
         public DbSet<UserCode> UserCodes { get; set; }
         public DbSet<UserLibrary> UserLibraries { get; set; }
         public DbSet<UserSubscription> UserSubscriptions { get; set; }
-        public ELibraryDbContext(DbContextOptions<ELibraryDbContext> options)
+        public ELibraryDbContext(DbContextOptions<ELibraryDbContext> options) : base(options)
         {
 
         }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    if (!optionsBuilder.IsConfigured)
-        //    {
-        //        optionsBuilder
-        //            .UseNpgsql()
-        //    }
-        //}
+
     }
 }
