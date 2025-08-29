@@ -22,7 +22,7 @@ namespace Persistence.Configurations
 
             builder.HasIndex(uc => new { uc.UserId, uc.CodeTypeId })
                 .IsUnique()
-                .HasFilter("\"IsUsed\"=false AND \"ExpiresAt\">NOW()");
+                .HasFilter("\"is_used\"=false AND \"expires_at\">NOW()");
 
             //builder.HasOne(uc => uc.User)
             //       .WithMany(u => u.UserCodes)

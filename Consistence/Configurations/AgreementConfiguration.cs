@@ -16,11 +16,11 @@ namespace Persistence.Configurations
             builder.HasKey(a => a.Id);
 
             builder.HasOne(a => a.Manager)
-                .WithMany(m => m.Agreements)
+                .WithMany(m => m.ManagerAgreements)
                 .HasForeignKey(a => a.ManagerId);
 
             builder.HasOne(a => a.AgreedWithUser)
-                .WithMany(u => u.Agreements)
+                .WithMany(u => u.ContributorAgreements)
                 .HasForeignKey(a => a.AgreedWithUserId);
 
             builder.HasOne(a => a.AgreedWithPublisher)

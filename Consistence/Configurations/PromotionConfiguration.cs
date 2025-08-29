@@ -13,7 +13,7 @@ namespace Persistence.Configurations
         public void Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder<Promotion> builder)
         {
             builder.HasKey(p => p.Id);
-            builder.ToTable(t => t.HasCheckConstraint("CK_Promotion_DiscountAmount", "DiscountAmount >= 0"));
+            builder.ToTable(t => t.HasCheckConstraint("ck_promotion_discount_amount", "discount_amount >= 0"));
 
         }
     }

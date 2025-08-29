@@ -26,8 +26,8 @@ namespace Persistence.Configurations
             builder.HasMany(builder => builder.UserSubscriptions)
                    .WithOne(sp => sp.SubscriptionPlan)
                    .HasForeignKey(sp => sp.SubscriptionPlanId);
-            builder.ToTable(t => t.HasCheckConstraint("CK_SubscriptionPlan_Price", "Price >= 0"));
-            builder.ToTable(t => t.HasCheckConstraint("CK_SubscriptionPlan_DurationInMonths", "DurationInMonths >= 1 AND DurationInMonths <= 12"));
+            builder.ToTable(t => t.HasCheckConstraint("ck_subscription_plan_price", "price >= 0"));
+            builder.ToTable(t => t.HasCheckConstraint("ck_subscription_plan_duration_in_months", "duration_in_months >= 1 AND duration_in_months <= 12"));
         }
     }
 }

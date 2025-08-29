@@ -45,7 +45,7 @@ namespace Persistence.Configurations
             //       .WithMany(b => b.Reviews)
             //       .HasForeignKey(r => r.BookId);
 
-            builder.ToTable(t=>t.HasCheckConstraint("CK_Review_Rating", "Rating >= 0 AND Rating <= 5"));
+            builder.ToTable(t=>t.HasCheckConstraint("ck_review_rating", "rating >= 0 AND rating <= 5"));
         }
     }
 }

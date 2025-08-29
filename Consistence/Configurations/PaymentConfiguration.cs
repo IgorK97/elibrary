@@ -28,7 +28,7 @@ namespace Persistence.Configurations
             builder.HasOne(p=>p.PaymentMethod)
                    .WithMany(pm=>pm.Payments)
                    .HasForeignKey(p=>p.PaymentMethodId);
-            builder.ToTable(t => t.HasCheckConstraint("CK_Payment_Amount", "Amount >= 0"));
+            builder.ToTable(t => t.HasCheckConstraint("ck_payment_amount", "amount >= 0"));
         }
     }
 }

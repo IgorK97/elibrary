@@ -19,8 +19,8 @@ namespace Persistence.Configurations
             builder.Property(ph => ph.NewPrice)
                    .HasColumnType("decimal(18,2)")
                    .IsRequired();
-            builder.ToTable(t => t.HasCheckConstraint("CK_PriceHistory_OldPrice", "OldPrice >= 0"));
-            builder.ToTable(t => t.HasCheckConstraint("CK_PriceHistory_NewPrice", "NewPrice >= 0"));
+            builder.ToTable(t => t.HasCheckConstraint("ck_price_history_old_price", "old_price >= 0"));
+            builder.ToTable(t => t.HasCheckConstraint("ck_price_history_new_price", "new_price >= 0"));
             //builder.HasOne(ph => ph.Manager)
             //       .WithMany(au => au.PriceHistories)
             //       .HasForeignKey(ph => ph.ManagerId);

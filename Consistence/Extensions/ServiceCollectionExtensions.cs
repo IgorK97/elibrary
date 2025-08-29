@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Persistence.Models;
 
 namespace Persistence.Extensions
 {
@@ -27,6 +29,14 @@ namespace Persistence.Extensions
                 options.UseNpgsql(
                     configuration.GetConnectionString("DefaultConnection"),
                     b => b.MigrationsAssembly(typeof(ELibraryDbContext).Assembly.FullName)));
+        }
+        public static void AddIdentityAuth(this IServiceCollection services)
+        {
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ELibraryDbContext>()
+                .AddDefaultTokenProviders();
+
         }
 
         //public static void AddInfrastructurePersistenceServices(this IServiceCollection services)
