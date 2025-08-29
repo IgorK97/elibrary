@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Consistence.Models
+namespace Persistence.Models
 {
     /// <summary>
     /// Represents the association between a genre and a creation.

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Consistence.Models
+namespace Persistence.Models
 {
     public class ContributorRole
     {

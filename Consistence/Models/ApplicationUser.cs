@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 
-namespace Consistence.Models
+namespace Persistence.Models
 {
     public class ApplicationUser : IdentityUser<long>
     {
