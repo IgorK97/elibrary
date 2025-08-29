@@ -16,6 +16,9 @@ namespace Consistence
         public decimal Amount { get; set; }
         public int PaymentMethodId { get; set; }
         public int StatusId { get; set; }
-        //Order ? Subscription ?
+        public long? OrderId { get; set; }
+        public Order? Order { get; set; }
+        public long? UserSubscriptionId { get; set; }
+        public UserSubscription? UserSubscription { get; set; }
     }
 }

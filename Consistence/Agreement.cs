@@ -16,15 +16,20 @@ namespace Consistence
         public long AgreedByManagerId { get; set; }
         public ApplicationUser AgreedByManager { get; set; } = null!;
         public long? SubmissionId { get; set; }
-        public Submission? BookSubmission { get; set; }
+        public Submission? Submission { get; set; }
         public int StatusId { get; set; }
         public AgreementStatus Status { get; set; } = null!;
         public int LicenseId { get; set; }
         public License License { get; set; } = null!;
+        public long BookId { get; set; }
+        public Book Book { get; set; } = null!;
         public DateTime CreatedAt { get; set; }
-        public DateTime SignedAt { get; set; }
+        public DateTime? SignedAt { get; set; }
+        public DateTime EffectiveFrom { get; set; }
+        public DateTime? EffectiveTo { get; set; }
+        public DateTime? TerminatedAt { get; set; }
         public string? ContractPath { get; set; }
-        
-
+        public string? TerminationReason { get; set; }
+        public string? TerminationDocPath { get; set; }
     }
 }

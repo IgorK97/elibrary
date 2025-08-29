@@ -8,7 +8,7 @@ namespace Consistence
 {
     public class UDK
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         public string Code { get; set; } = null!;
         public string Description { get; set; } = null!;
         public ICollection<Book> Books { get; set; } = [];

@@ -8,7 +8,7 @@ namespace Consistence
 {
     public class SubscriptionPlan
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; } = null!;
         public decimal Price { get; set; }
         public int DurationInMonths { get; set; }

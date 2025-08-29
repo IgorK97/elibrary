@@ -8,7 +8,7 @@ namespace Consistence
 {
     public class UserSubscription
     {
-        public int Id { get; set; }
+        public long Id { get; set; }
         public long UserId { get; set; }
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }

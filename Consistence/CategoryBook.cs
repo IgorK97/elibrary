@@ -12,5 +12,6 @@ namespace Consistence
         public long BookId{get;set; }
         public Category Category { get; set; } = null!;
         public Book Book { get; set; } = null!;
+        
     }
 }

@@ -27,5 +27,7 @@ namespace Consistence
         public ICollection<OrderItem> OrderItems { get; set; } = [];
         public Publisher? Publisher { get; set; }
         public ICollection<Category> Categories { get; set; } = [];
+        public ICollection<Agreement> Agreements { get; set; } = [];
+        public ICollection<Submission> Submissions { get; set; } = [];
     }
 }

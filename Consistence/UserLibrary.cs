@@ -9,7 +9,7 @@ namespace Consistence
     public class UserLibrary
     {
         public long UserId { get; set; }
-        public int BookId { get; set; }
+        public long BookId { get; set; }
         public int AccessTypeId { get; set; }
         public long? TagId { get; set; }
         public ApplicationUser User { get; set; } = null!;

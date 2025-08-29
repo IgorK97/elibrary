@@ -13,5 +13,6 @@ namespace Consistence
         public int RoleId { get; set; }
         public Book Book { get; set; } = null!;
         public Contributor Contributor { get; set; } = null!;
+        public ContributorRole Role { get; set; } = null!;
     }
 }

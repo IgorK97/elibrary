@@ -12,7 +12,7 @@ namespace Consistence
         public long UserSubscriptionId { get; set; }
         public long BookId { get; set; }
         public DateTime AddedDate { get; set; }
-        public DateTime? RemovedDate { get; set; }
+        //public DateTime? RemovedDate { get; set; }
         public UserSubscription UserSubscription { get; set; } = null!;
         public Book Book { get; set; } = null!;
     }
