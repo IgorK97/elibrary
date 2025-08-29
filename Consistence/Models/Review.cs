@@ -13,7 +13,7 @@ namespace Persistence.Models
         public Book Book { get; set; } = null!;
         public long UserId { get; set; }
         public ApplicationUser User { get; set; } = null!;
-        public int Rating { get; set; }
+        public decimal Rating { get; set; }
         public string? Comment { get; set; }
         public long? ModeratedById { get; set; }
         public ApplicationUser? ModeratedBy { get; set; }
