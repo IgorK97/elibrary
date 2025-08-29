@@ -16,6 +16,8 @@ namespace Persistence.Configurations
             builder.Property(g => g.Name)
                    .IsRequired()
                    .HasMaxLength(100);
+            builder.HasIndex(g => g.Name)
+                   .IsUnique();
         }
     }
 }

@@ -18,9 +18,12 @@ namespace Persistence.Configurations
             builder.Property(bbk => bbk.Code)
                    .IsRequired()
                    .HasMaxLength(20);
+            
 
             builder.Property(bbk => bbk.Description)
                    .HasMaxLength(500);
+            builder.HasIndex(bbk => bbk.Code)
+                   .IsUnique();
 
             //builder.HasMany(bbk => bbk.Books)
             //       .WithOne(b => b.BBK)

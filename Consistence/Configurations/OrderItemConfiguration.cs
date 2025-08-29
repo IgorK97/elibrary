@@ -14,9 +14,10 @@ namespace Persistence.Configurations
         {
             builder.HasKey(oi => oi.Id);
 
-            builder.Property(oi => oi.UnitPrice)
+            builder.Property(oi => oi.ItemPrice)
                    .HasColumnType("decimal(18,2)")
                    .IsRequired();
+            builder.ToTable(t => t.HasCheckConstraint("CK_OrderItem_ItemPrice", "ItemPrice >= 0"));
             //builder.HasOne(oi => oi.Order)
             //       .WithMany(o => o.OrderItems)
             //       .HasForeignKey(oi => oi.OrderId);

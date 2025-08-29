@@ -20,7 +20,7 @@ namespace Persistence.Configurations
 
             builder.Property(b => b.ISBN)
                    .IsRequired()
-                   .HasMaxLength(20);
+                   .HasMaxLength(17);
 
             builder.Property(b => b.Description)
                    .HasMaxLength(3000);
@@ -101,6 +101,7 @@ namespace Persistence.Configurations
                    .WithOne(ph => ph.Book)
                    .HasForeignKey(ph => ph.BookId);
 
+            builder.HasIndex(b => b.ISBN).IsUnique();
 
         }
     }

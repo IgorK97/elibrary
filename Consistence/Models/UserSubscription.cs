@@ -17,6 +17,6 @@ namespace Persistence.Models
         public SubscriptionPlan SubscriptionPlan { get; set; } = null!;
         public int StatusId { get; set; }
         public SubscriptionStatus Status { get; set; } = null!;
-        public int RebillId { get; set; }
+        public int? RebillId { get; set; }
     }
 }

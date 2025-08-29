@@ -15,6 +15,6 @@ namespace Persistence.Models
         public long BookId { get; set; }
         public Book Book { get; set; } = null!;
 
-        public decimal UnitPrice { get; set; }
+        public decimal ItemPrice { get; set; }
     }
 }

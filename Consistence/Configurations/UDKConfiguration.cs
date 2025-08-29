@@ -16,6 +16,7 @@ namespace Persistence.Configurations
             builder.Property(udk => udk.Code)
                    .IsRequired()
                    .HasMaxLength(20);
+            builder.HasIndex(udk => udk.Code).IsUnique();
             builder.Property(udk => udk.Description)
                    .HasMaxLength(500);
             //builder.HasMany(udk => udk.Books)

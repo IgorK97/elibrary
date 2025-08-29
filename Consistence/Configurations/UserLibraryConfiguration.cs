@@ -30,6 +30,8 @@ namespace Persistence.Configurations
                             .WithMany(t=>t.TaggedBooks)
                             .HasForeignKey(ul=>ul.TagId);
 
+            builder.HasIndex(ul => new { ul.UserId, ul.BookId }).IsUnique();
+
         }
     }
 }

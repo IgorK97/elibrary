@@ -36,6 +36,7 @@ namespace Persistence.Configurations
             builder.HasMany(o => o.Payments)
                    .WithOne(p => p.Order)
                    .HasForeignKey(p => p.OrderId);
+            builder.ToTable(t => t.HasCheckConstraint("CK_Order_TotalAmount", "TotalAmount >= 0"));
         }
     }
 }
