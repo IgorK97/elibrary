@@ -10,7 +10,8 @@ namespace Persistence.Models
     {
         public long Id { get; set; }
         public string Title { get; set; } = null!;
-        public DateTime? PublishedDate { get; set; }
+        public DateTime? PubliсationDate { get; set; }
+        public DateTime CreatedAt { get; set; }
         public string? ISBN { get; set; }
         public decimal Price { get; set; }
         public string Description { get; set; } = null!;
@@ -37,5 +38,6 @@ namespace Persistence.Models
         public ICollection<Review> Reviews { get; set; } = [];
         public ICollection<Promotion> Promotions { get; set; } = [];
         public ICollection<PriceHistory> PriceHistories { get; set; } = [];
+        public ICollection<BookView> BookViews { get; set; } = [];
     }
 }
