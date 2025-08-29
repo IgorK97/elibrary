@@ -10,10 +10,9 @@ namespace Consistence.Models
     {
         public long Id { get; set; }
         public long UserSubscriptionId { get; set; }
-        public long BookId { get; set; }
-        public DateTime AddedDate { get; set; }
-        //public DateTime? RemovedDate { get; set; }
         public UserSubscription UserSubscription { get; set; } = null!;
+        public long BookId { get; set; }
         public Book Book { get; set; } = null!;
+        public DateTime AddedDate { get; set; }
     }
 }

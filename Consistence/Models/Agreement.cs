@@ -13,8 +13,8 @@ namespace Consistence.Models
         public ApplicationUser? AgreedWithUser { get; set; }
         public long? AgreedWithPublisherId { get; set; }
         public Publisher? AgreedWithPublisher { get; set; }
-        public long AgreedByManagerId { get; set; }
-        public ApplicationUser AgreedByManager { get; set; } = null!;
+        public long ManagerId { get; set; }
+        public ApplicationUser Manager { get; set; } = null!;
         public long? SubmissionId { get; set; }
         public Submission? Submission { get; set; }
         public int StatusId { get; set; }

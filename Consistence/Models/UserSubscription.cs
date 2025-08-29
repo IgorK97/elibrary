@@ -10,13 +10,13 @@ namespace Consistence.Models
     {
         public long Id { get; set; }
         public long UserId { get; set; }
+        public ApplicationUser User { get; set; } = null!;
         public DateTime? StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public int SubscriptionPlanId { get; set; }
-        public int StatusId { get; set; }
-        public int RebillId { get; set; }
-        public ApplicationUser User { get; set; } = null!;
         public SubscriptionPlan SubscriptionPlan { get; set; } = null!;
+        public int StatusId { get; set; }
         public SubscriptionStatus Status { get; set; } = null!;
+        public int RebillId { get; set; }
     }
 }

@@ -12,9 +12,10 @@ namespace Consistence.Models
     public class CategoryBook
     {
         public int CategoryId{get;set;}
-        public long BookId{get;set; }
         public Category Category { get; set; } = null!;
+        public long BookId{get;set; }
         public Book Book { get; set; } = null!;
-        
+
+
     }
 }

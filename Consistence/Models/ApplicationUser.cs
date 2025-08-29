@@ -17,7 +17,18 @@ namespace Consistence.Models
         public DateTime? DeletedAt { get; set; }
         public bool MarketingAgreement { get; set; } = false;
         public bool IsDeleted { get; set; } = false;
-        //public int Points { get; set; } = 0;
+        public Contributor? Contributor { get; set; }
+        public ICollection<Order> Orders { get; set; } = [];
+        public ICollection<Submission> Submissions { get; set; } = [];
+        public ICollection<Agreement> Agreements { get; set; } = [];
+        public ICollection<BookView> BookViews { get; set; } = [];
+        public ICollection<PriceHistory> PriceHistories { get; set; } = [];
+        public ICollection<Promotion> Promotions { get; set; } = [];
+        public ICollection<Review> Reviews { get; set; } = [];
+        public ICollection<Tag> Tags { get; set; } = [];
+        public ICollection<UserCode> UserCodes { get; set; } = [];
+        public ICollection<UserLibrary> UserLibraryItems { get; set; } = [];
+        public ICollection<UserSubscription> UserSubscriptions { get; set; } = [];
 
     }
 }

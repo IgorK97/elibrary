@@ -10,9 +10,11 @@ namespace Consistence.Models
     {
         public long Id { get; set; }
         public long UserId { get; set; }
-        public long BookId { get; set; }
-        public DateTime ViewedAt { get; set; }
         public ApplicationUser User { get; set; } = null!;
+        public long BookId { get; set; }
         public Book Book { get; set; } = null!;
+        public DateTime ViewedAt { get; set; }
+        
+        
     }
 }

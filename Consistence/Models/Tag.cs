@@ -12,7 +12,8 @@ namespace Consistence.Models
         public string Name { get; set; } = null!;
         public bool IsSystem { get; set; }
         public long? CreatedByUserId { get; set; }
-        public bool IsDeleted { get; set; }
         public ApplicationUser? CreatedByUser { get; set; }
+        public bool IsDeleted { get; set; }
+        public ICollection<UserLibrary> TaggedBooks { get; set; } = [];
     }
 }

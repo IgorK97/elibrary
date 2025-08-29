@@ -14,8 +14,8 @@ namespace Consistence.Models
     public class GenreCreation
     {
         public int GenreId { get; set; }
-        public long CreationId { get; set; }
         public Genre Genre { get; set; } = null!;
+        public long CreationId { get; set; }
         public Creation Creation { get; set; } = null!;
     }
 }

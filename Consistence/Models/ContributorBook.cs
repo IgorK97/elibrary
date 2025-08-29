@@ -9,10 +9,10 @@ namespace Consistence.Models
     public class ContributorBook
     {
         public long BookId { get; set; }
-        public long ContributorId { get; set; }
-        public int RoleId { get; set; }
         public Book Book { get; set; } = null!;
+        public long ContributorId { get; set; }
         public Contributor Contributor { get; set; } = null!;
+        public int RoleId { get; set; }
         public ContributorRole Role { get; set; } = null!;
     }
 }

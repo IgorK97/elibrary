@@ -17,17 +17,25 @@ namespace Consistence.Models
         public string? CoverPath { get; set; }
         public string? FilePath { get; set; }
         public long? PublisherId { get; set; }
+        public Publisher? Publisher { get; set; }
         public int? BBKId { get; set; }
+        public BBK? BBK { get; set; }
         public int? UDKId { get; set; }
+        public UDK? UDK { get; set; }
         public bool IsHidden { get; set; }
         public ICollection<Creation> Creations { get; set; } = [];
-        public ICollection<CreationBook> CreationBooks { get; set; } = [];
-        public BBK? BBK { get; set; }
-        public UDK? UDK { get; set; }
+        //public ICollection<CreationBook> CreationBooks { get; set; } = [];
         public ICollection<OrderItem> OrderItems { get; set; } = [];
-        public Publisher? Publisher { get; set; }
+        public ICollection<SubscriptionItem> SubscriptionItems { get; set; } = [];
         public ICollection<Category> Categories { get; set; } = [];
+        //public ICollection<CategoryBook> CategoryBooks { get; set; } = [];
         public ICollection<Agreement> Agreements { get; set; } = [];
         public ICollection<Submission> Submissions { get; set; } = [];
+        public ICollection<Contributor> Contributors { get; set; } = [];
+        public ICollection<ContributorBook> ContributorBooks { get; set; } = [];
+        public ICollection<UserLibrary> UserLibraries { get; set; } = [];
+        public ICollection<Review> Reviews { get; set; } = [];
+        public ICollection<Promotion> Promotions { get; set; } = [];
+        public ICollection<PriceHistory> PriceHistories { get; set; } = [];
     }
 }

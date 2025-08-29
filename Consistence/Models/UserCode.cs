@@ -10,12 +10,12 @@ namespace Consistence.Models
     {
         public long Id { get; set; }
         public long UserId { get; set; }
+        public ApplicationUser User { get; set; } = null!;
         public string Code { get; set; } = null!;
         public int CodeTypeId { get; set; }
-        public DateTime CreatedDate { get; set; }
+        public CodeType CodeType { get; set; } = null!;
+        public DateTime CreatedAt { get; set; }
         public DateTime ExpirationDate { get; set; }
         public bool IsUsed { get; set; }
-        public ApplicationUser User { get; set; } = null!;
-        public CodeType CodeType { get; set; } = null!;
     }
 }

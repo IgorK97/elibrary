@@ -10,12 +10,13 @@ namespace Consistence.Models
     {
         public long Id { get; set; }
         public long BookId { get; set; }
+        public Book Book { get; set; } = null!;
+
         public decimal OldPrice { get; set; }
         public decimal NewPrice { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
-        public long ChangedByManagerId { get; set; }
-        public Book Book { get; set; } = null!;
-        public ApplicationUser ChangeByManager { get; set; } = null!;
+        public long ManagerId { get; set; }
+        public ApplicationUser Manager { get; set; } = null!;
     }
 }

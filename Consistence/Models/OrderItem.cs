@@ -10,9 +10,11 @@ namespace Consistence.Models
     {
         public int Id { get; set; }
         public long OrderId { get; set; }
-        public long BookId { get; set; }
-        public decimal UnitPrice { get; set; }
         public Order Order { get; set; } = null!;
+
+        public long BookId { get; set; }
         public Book Book { get; set; } = null!;
+
+        public decimal UnitPrice { get; set; }
     }
 }

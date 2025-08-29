@@ -12,8 +12,8 @@ namespace Consistence.Models
     public class CreationBook
     {
         public long CreationId { get; set; }
-        public long BookId { get; set; }
         public Creation Creation { get; set; } = null!;
+        public long BookId { get; set; }
         public Book Book { get; set; } = null!;
 
     }

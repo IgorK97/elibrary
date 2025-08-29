@@ -10,13 +10,17 @@ namespace Consistence.Models
     {
         public long Id { get; set; }
         public string Title { get; set; } = null!;
-        public long? SubmittedWithUserId { get; set; }
-        public long? SubmittedWithPublisherId { get; set; }
-        public long SubmittedByManagerId { get; set; }
+        public long? SubmittedByUserId { get; set; }
+        public ApplicationUser? SubmittedByUser { get; set; } = null!;
+        public long? SubmittedByPublisherId { get; set; }
+        public Publisher? SubmittedByPublisher { get; set; } = null!;
+        public long ManagerId { get; set; }
+        public ApplicationUser Manager { get; set; } = null!;
         public DateTime CreatedAt { get; set; }
         public DateTime ReviewedAt { get; set; }
         public DateTime? SubmittedAt { get; set; }
         public int StatusId { get; set; }
+        public SubmissionStatus Status { get; set; } = null!;
         public string? DocumentsPath { get; set; }
         public string? Description { get; set; }
         public string? RejectionReason { get; set; }
@@ -24,9 +28,5 @@ namespace Consistence.Models
         public Creation? Creation { get; set; }
         public long? BookId { get; set; }
         public Book? Book { get; set; }
-        public ApplicationUser? SubmittedWithUser { get; set; } = null!;
-        public Publisher? SubmittedWithPublisher { get; set; } = null!;
-        public ApplicationUser SubmittedByManager { get; set; } = null!;
-        public SubmissionStatus SubmissionStatus { get; set; } = null!;
     }
 }

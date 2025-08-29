@@ -14,5 +14,8 @@ namespace Consistence.Models
         public string Phone { get; set; } = null!;
         public string Email { get; set; } = null!;
         public string? Website { get; set; }
+        public ICollection<Book> Books { get; set; } = [];
+        public ICollection<Agreement> Agreements { get; set; } = [];
+        public ICollection<Submission> Submissions { get; set; } = [];
     }
 }

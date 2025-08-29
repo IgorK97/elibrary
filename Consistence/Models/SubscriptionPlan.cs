@@ -14,6 +14,6 @@ namespace Consistence.Models
         public int DurationInMonths { get; set; }
         public string Description { get; set; } = null!;
         public bool IsActive { get; set; }
-        public ICollection<UserSubscription> UserSubscription { get; set; } = [];
+        public ICollection<UserSubscription> UserSubscriptions { get; set; } = [];
     }
 }

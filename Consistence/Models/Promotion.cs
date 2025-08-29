@@ -10,12 +10,12 @@ namespace Consistence.Models
     {
         public long Id { get; set; }
         public long BookId { get; set; }
+        public Book Book { get; set; } = null!;
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public long CreatedByUserId { get; set; }
+        public long ManagerId { get; set; }
+        public ApplicationUser Manager { get; set; } = null!;
         public decimal DiscountAmount { get; set; }
         public bool IsActive { get; set; }
-        public Book Book { get; set; } = null!;
-        public ApplicationUser CreatedByUser { get; set; } = null!; 
     }
 }

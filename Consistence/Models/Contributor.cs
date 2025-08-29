@@ -14,5 +14,7 @@ namespace Consistence.Models
         public long? UserId { get; set; }
         public ApplicationUser? User { get; set; }
         public ICollection<ContributorBook> ContributorBooks { get; set; } = [];
+        public ICollection<Book> Books { get; set; } = [];
+        public ICollection<Creation> Creations { get; set; } = [];
     }
 }

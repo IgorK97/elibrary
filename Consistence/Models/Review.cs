@@ -10,7 +10,9 @@ namespace Consistence.Models
     {
         public long Id { get; set; }
         public long BookId { get; set; }
+        public Book Book { get; set; } = null!;
         public long UserId { get; set; }
+        public ApplicationUser User { get; set; } = null!;
         public int Rating { get; set; }
         public string? Comment { get; set; }
         public long? ModeratedById { get; set; }
@@ -27,8 +29,6 @@ namespace Consistence.Models
         public bool DeletedBySystem { get; set; }
         public int StatusId { get; set; }
         public ReviewStatus Status { get; set; } = null!;
-        public Book Book { get; set; } = null!;
-        public ApplicationUser User { get; set; } = null!;
 
     }
 }

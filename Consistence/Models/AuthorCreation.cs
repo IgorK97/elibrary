@@ -12,8 +12,9 @@ namespace Consistence.Models
     public class AuthorCreation
     {
         public long CreationId { get; set; }
-        public long AuthorId { get; set; }
         public Creation Creation { get; set; } = null!;
+        public long AuthorId { get; set; }
         public Contributor Author { get; set; } = null!;
+
     }
 }

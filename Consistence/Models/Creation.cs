@@ -15,6 +15,6 @@ namespace Consistence.Models
         public DateTime? WrittenAt { get; set; }
         public ICollection<Book> Books { get; set; } = [];
         public ICollection<Genre> Genres { get; set; } = [];
-        public ICollection<AuthorCreation> AuthorCreation { get; set; } = [];
+        public ICollection<Contributor> Authors { get; set; } = [];
     }
 }
