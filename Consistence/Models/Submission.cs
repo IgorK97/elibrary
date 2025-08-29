@@ -28,5 +28,6 @@ namespace Persistence.Models
         public Creation? Creation { get; set; }
         public long? BookId { get; set; }
         public Book? Book { get; set; }
+        public ICollection<Agreement> Agreements { get; set; } = [];
     }
 }

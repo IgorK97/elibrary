@@ -13,7 +13,15 @@ namespace Persistence.Configurations
     {
         public void Configure(EntityTypeBuilder<AccessType> builder)
         {
+            builder.HasKey(at => at.Id);
 
+            builder.Property(at => at.Name).HasMaxLength(50);
+
+            builder.Property(at=>at.Description).HasMaxLength(100);
+
+            builder.HasMany(at => at.UserLibraryItems)
+                   .WithOne(sp => sp.AccessType)
+                   .HasForeignKey(sp => sp.AccessTypeId);
         }
     }
 }

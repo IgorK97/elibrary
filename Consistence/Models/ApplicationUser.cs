@@ -19,12 +19,15 @@ namespace Persistence.Models
         public bool IsDeleted { get; set; } = false;
         public Contributor? Contributor { get; set; }
         public ICollection<Order> Orders { get; set; } = [];
-        public ICollection<Submission> Submissions { get; set; } = [];
-        public ICollection<Agreement> Agreements { get; set; } = [];
+        public ICollection<Submission> ManagerSubmissions { get; set; } = [];
+        public ICollection<Submission> ContributorSubmissions { get; set; } = [];
+        public ICollection<Agreement> ManagerAgreements { get; set; } = [];
+        public ICollection<Agreement> ContributorAgreements { get; set; } = [];
         public ICollection<BookView> BookViews { get; set; } = [];
         public ICollection<PriceHistory> PriceHistories { get; set; } = [];
         public ICollection<Promotion> Promotions { get; set; } = [];
-        public ICollection<Review> Reviews { get; set; } = [];
+        public ICollection<Review> ReaderReviews { get; set; } = [];
+        public ICollection<Review> ManagedReviews { get; set; } = [];
         public ICollection<Tag> Tags { get; set; } = [];
         public ICollection<UserCode> UserCodes { get; set; } = [];
         public ICollection<UserLibrary> UserLibraryItems { get; set; } = [];
