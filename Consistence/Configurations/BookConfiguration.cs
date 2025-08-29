@@ -101,9 +101,7 @@ namespace Persistence.Configurations
                    .WithOne(ph => ph.Book)
                    .HasForeignKey(ph => ph.BookId);
 
-            builder.HasMany(b=>b.UserLibraries)
-                .WithOne(ul=>ul.Book)
-                .HasForeignKey(ul=>ul.BookId);
+
         }
     }
 }

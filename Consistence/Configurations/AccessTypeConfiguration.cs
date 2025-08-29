@@ -19,7 +19,7 @@ namespace Persistence.Configurations
 
             builder.Property(at=>at.Description).HasMaxLength(100);
 
-            builder.HasMany(at => at.UserLibraryItems)
+            builder.HasMany(at => at.UserLibraries)
                    .WithOne(sp => sp.AccessType)
                    .HasForeignKey(sp => sp.AccessTypeId);
         }

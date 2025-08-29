@@ -8,6 +8,7 @@ namespace Persistence.Models
 {
     public class UserLibrary
     {
+        public long Id { get; set; }
         public long UserId { get; set; }
         public ApplicationUser User { get; set; } = null!;
         public long BookId { get; set; }

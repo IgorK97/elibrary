@@ -30,7 +30,7 @@ namespace Persistence.Models
         public ICollection<Review> ManagedReviews { get; set; } = [];
         public ICollection<Tag> Tags { get; set; } = [];
         public ICollection<UserCode> UserCodes { get; set; } = [];
-        public ICollection<UserLibrary> UserLibraryItems { get; set; } = [];
+        public ICollection<UserLibrary> UserLibraries { get; set; } = [];
         public ICollection<UserSubscription> UserSubscriptions { get; set; } = [];
 
     }

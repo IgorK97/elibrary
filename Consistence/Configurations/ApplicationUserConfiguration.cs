@@ -70,7 +70,7 @@ namespace Persistence.Configurations
                         .WithOne(uc => uc.User)
                         .HasForeignKey(uc => uc.UserId);
 
-            builder.HasMany(au => au.UserLibraryItems)
+            builder.HasMany(au => au.UserLibraries)
                         .WithOne(ul => ul.User)
                         .HasForeignKey(ul => ul.UserId);
 
