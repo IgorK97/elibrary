@@ -32,8 +32,7 @@ namespace Persistence.Configurations
 
             builder.HasOne(r => r.DeletedBy)
                      .WithMany()
-                     .HasForeignKey(r => r.DeletedById)
-                     .OnDelete(DeleteBehavior.Restrict);
+                     .HasForeignKey(r => r.DeletedById);
 
             
 

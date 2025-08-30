@@ -35,11 +35,11 @@ namespace Persistence.Configurations
                         .HasForeignKey(s => s.SubmittedByUserId);
 
             builder.HasMany(au => au.ReaderReviews)
-                   .WithOne(r => r.User)
+                   .WithOne(r => r.Reader)
                    .HasForeignKey(r => r.UserId);
 
             builder.HasMany(au => au.ManagedReviews)
-                   .WithOne(r => r.User)
+                   .WithOne(r => r.ModeratedBy)
                    .HasForeignKey(r => r.UserId);
 
             builder.HasMany(au => au.Orders)

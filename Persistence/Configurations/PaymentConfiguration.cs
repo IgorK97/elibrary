@@ -17,9 +17,9 @@ namespace Persistence.Configurations
                    .HasColumnType("decimal(18,2)")
                    .IsRequired();
 
-            builder.Property(p => p.Status)
-                   .IsRequired()
-                   .HasMaxLength(50);
+            builder.HasOne(p => p.Status)
+                .WithMany(ps => ps.Payments)
+                .HasForeignKey(p => p.StatusId);
 
             //builder.HasOne(p => p.Order)
             //       .WithMany(o => o.Payments)

@@ -13,27 +13,28 @@ namespace Persistence.Extensions
 {
     public static class ServiceCollectionExtensions
     {
-        public static void AddInfrastructurePersistence(this IServiceCollection services, IConfiguration configuration)
-        {
-            // Add your infrastructure and persistence services here
-            // For example, you might add DbContext, repositories, etc.
-            services.AddDbContext<ELibraryDbContext>(options =>
-            options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
-            .UseSnakeCaseNamingConvention());
+        //public static void AddInfrastructurePersistence(this IServiceCollection services, IConfiguration configuration)
+        //{
+        //    // Add your infrastructure and persistence services here
+        //    // For example, you might add DbContext, repositories, etc.
+        //    services.AddDbContext<ELibraryDbContext>(options =>
+        //    options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"))
+        //    .UseSnakeCaseNamingConvention());
 
-        }
+        //}
 
         public static void AddAppDbContext(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddDbContext<ELibraryDbContext>(options =>
                 options.UseNpgsql(
                     configuration.GetConnectionString("DefaultConnection"),
-                    b => b.MigrationsAssembly(typeof(ELibraryDbContext).Assembly.FullName)));
+                    b => b.MigrationsAssembly(typeof(ELibraryDbContext).Assembly.FullName))
+                .UseSnakeCaseNamingConvention());
         }
         public static void AddIdentityAuth(this IServiceCollection services)
         {
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole<long>>()
                 .AddEntityFrameworkStores<ELibraryDbContext>()
                 .AddDefaultTokenProviders();
 

@@ -20,9 +20,9 @@ namespace Persistence.Configurations
                    .WithMany(ct => ct.UserCodes)
                    .HasForeignKey(uc => uc.CodeTypeId);
 
-            builder.HasIndex(uc => new { uc.UserId, uc.CodeTypeId })
+            builder.HasIndex(uc => uc.Code)
                 .IsUnique()
-                .HasFilter("\"is_used\"=false AND \"expires_at\">NOW()");
+                .HasFilter("\"is_used\"=false");
 
             //builder.HasOne(uc => uc.User)
             //       .WithMany(u => u.UserCodes)

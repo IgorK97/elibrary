@@ -14,6 +14,16 @@ namespace Persistence
     public class ELibraryDbContext 
         : IdentityDbContext<ApplicationUser, IdentityRole<long>, long>
     {
+        public ELibraryDbContext(DbContextOptions<ELibraryDbContext> options) : base(options)
+        {
+
+        }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            builder.ApplyConfigurationsFromAssembly(typeof(ELibraryDbContext).Assembly);
+        }
         public DbSet<AccessType> AccessTypes { get; set; }
         public DbSet<Agreement> Agreements { get; set; }
         public DbSet<AgreementStatus> AgreementStatuses { get; set; }
@@ -55,16 +65,7 @@ namespace Persistence
         public DbSet<UserCode> UserCodes { get; set; }
         public DbSet<UserLibrary> UserLibraries { get; set; }
         public DbSet<UserSubscription> UserSubscriptions { get; set; }
-        public ELibraryDbContext(DbContextOptions<ELibraryDbContext> options) : base(options)
-        {
 
-        }
-
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            base.OnModelCreating(builder);
-            builder.ApplyConfigurationsFromAssembly(typeof(ELibraryDbContext).Assembly);
-        }
 
     }
 }
